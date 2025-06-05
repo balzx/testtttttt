@@ -44,6 +44,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            sudo mv /home/${{ secrets.EC2_USERNAME }}/index.html /var/www/html/index.html
-            sudo chown www-data:www-data /var/www/html/index.html
-            sudo chmod 644 /var/www/html/index.html
+            sudo mv /home/${{ secrets.EC2_USERNAME }}/index.html /usr/share/nginx/html/index.html
+            sudo chown www-data:www-data /usr/share/nginx/html/index.html
+            sudo chmod 644 /usr/share/nginx/html/index.html
